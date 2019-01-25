@@ -1,0 +1,130 @@
+<<!DOCTYPE html>
+<html lang="en">
+<head>
+	<!-- charset编码 -->
+	<meta charset="UTF-8">
+	<title>day1</title>
+<!-- 超链接优化写法 ,让所有的超链接都在新窗口打开，需要写在head中-->
+<base target="_blank"> 
+<!-- http-equiv 网页重定向 自动跳转 -->
+<!-- <meta http-equiv="reflesh" content="5";http://www.baidu.com> -->
+<!-- 链接外部样式表 -->
+<link rel="stylesheet" type="text/css" href="">
+<!-- 设置icon图标 -->
+<link rel="icon" href="1.icon">
+<style>
+	#a {
+		color: red;
+		/* 链接默认状态*/
+	}
+	#a:visited {
+		color: blue;
+		/*鼠标放到链接上显示的状态*/
+	}
+	#a:hover{
+		color: pink;
+		/*链接激活的状态*/
+	}
+	#a：active {
+		color: yellow;
+	}
+
+</style>
+</head>
+<body>
+<!--单标签-->
+<!--换行标签-->
+	<br> 
+<!-- 水平线标签-->
+	<hr>
+<!--双标签-->
+<!-- 段落标签，上下自动生成空白行。br换行不会生成空白行-->
+    <p></p>	
+<!--标题标签，h1在一个页面中只出现一次。便于seo搜索引擎优化-->
+    <h1></h1>
+    <h2></h2>
+<!-- 文本标签 -->
+    <font size="" color="">文本标签</font>
+<!-- 文本加粗 尽量使用strong-->
+    <strong></strong>
+    <b></b>
+<!-- 文本倾斜，删除，下划线，图片标签 -->
+    <em> 倾斜，偏向于em</em>
+    <i> 倾斜</i>
+    <del> 删除线，偏向于del</del>
+    <s>删除线 </s>
+    <ins>下划线，偏向于ins</ins>
+    <u>下划线</u>
+<!-- src图片的来源 title：提示文本，鼠标放到图片上显示的文字，width，height 图片没有定义宽高的时候，图片按照百分之百比列显示，只改变其中一个，会等比列缩放 -->
+    <img src=" " alt="文字" title="鼠标放到图片上显示" width="" height="">
+
+<!-- 超链接 -->
+<!-- href 目的路径，跳转的页面  ，提示文本，鼠标放到改链接上显示的文字，一般为self ，在本页面打开，_blank,在新页面中打开-->
+<!-- 当href的值为javascript:void(0)或者javascript: ; 表示超链接不做任何事情，不做任何跳转。-->
+<a href="" title="" target="_self">这是一个超链接</a>
+
+<!-- 锚链接 ，类似书签，在页面中自由跳转-->
+<p id="aaa">这是一个段落</p>
+<a href="#aaa"> 链接到id为aaa的段落处</a>
+<!-- 空链 -->
+<a href="#">空链，相当于页首的位置</a>
+<!-- 当<a href="asdasd.rar"></a>当是一个文件是，会下载该压缩文件 -->
+
+<!-- 列表  -->
+<!-- 无序列表  type的类型，square小方块，disc实心小圆圈，circle空心小圆圈-->
+<ul type="disc">
+	<li>列表项</li>
+	<li>列表项</li>
+	<li>列表项</li>
+</ul>
+<!-- 有序列表 type="1,a,A，i，I”  start = “3”决定开始的位置-->
+<ol type="" start="">
+	<li>列表项</li>
+	<li>列表项</li>
+	<li>列表项</li>
+</ol>
+<!-- 自定义列表 -->
+<dl>
+	<dt>小标题</dt>	
+	<dd><解释标题</dd>
+	<dd>解释标题</dd>
+</dl>
+<!-- 音乐标签 hidden="true" 隐藏音乐标签 -->
+<embed src="1.mp3" hidden="true"> </embed>
+<!-- 滚动标签  behavior ：设置滚动的方式，alternate 在两端之间来回滚动 scroll 由一端滚动到另一端，会重复 slide 又一端滚动到另一端，不会重复 direction：设置滚动到方向 loop：滚动次数-->
+<marquee width="" height="" bgcolor="" behavior="" direction="" loop="">
+</marquee>
+
+
+<!-- 表格的结构 th标题自动加粗水平居中 -->
+<table width="300px" height="500px" bgcolor="blue" border="1px" align="center">
+	<caption>标题</caption>
+	<tr>
+		<td>第一列第一行第一个</td>
+		<td>第一列第一行第二个</td>
+		<td>第一列第一行第三个</td>
+	</tr>
+	<tr>
+		<td>第二列第二行第一个</td>
+		<td colspan="2">合并后的2个</td>>
+	</tr>
+</table>
+<!-- 文本输入框 type:输入的是文本的内容 name：输入框的名字 maxlength：限定输入文本长度 readonly：文本框只读 disable：文本框未激活 value：输入框中的默认内容-->
+<!-- 密码输入框 -->
+<input type="password" name="pwd">
+<!-- 单选框 -->
+<input type="radio" name="gender" checked="checked">男
+<!-- 文本上传控件 -->
+<input type=" file">
+<!-- 文本提交按钮 -->
+<input type="submit">
+<input type="button" value="普通按钮">
+<!-- 图片按钮 -->
+<input type="image" src="">
+<!-- 重置按钮 -->
+<input type="reset" >
+<div>
+<a href="#" id="a">fangsahnglai </a> 
+</div>>
+</body>
+</html>
