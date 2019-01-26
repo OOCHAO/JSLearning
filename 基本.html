@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>	
+	<!-- 基本语法 -->
+	<script>
+		var x=1;
+		// document.write(x);
+		// 下面这行代码是一个字符串,但任然可以以视为一个完整的语句;
+		'Hello,world';
+		//语句块是语句的集合
+		if (2>1){
+			x=1;
+			y=2;
+			z=3;
+			if(x<y){
+				z=4;
+			}
+			if(x>y){
+				z=3;
+			}
+		}	
+	</script>	
+	<!-- 数据类型 -->
+	<script>
+		123;//整数
+		0.123;//浮点数
+		1.234e3;//科学计数法1.234*1000,等同于1234
+		-99;//负数
+		NaN;//NaN表示Not a Number,当无法计算结果时用NaN表示
+		Infinity;//表示无限大,当数值超过了最大值时会显示
+		//%是求余运算
+		10%3;//j结果为1
+		2/0;//Infinity
+		0/0;//NaN
+		//&& 是与运算,只有所有都为true,&&运算结果才是true;
+		//|| 是或运算,其中有一个为true,||运算结果就是true;
+		//! 是非运算,转变结果
+		var age = 15;
+		if(age>=18){
+			alert('adult');
+		}else{
+			alert('teenager');
+		}
+		//   == and===区别在于,===不会转换数据类型,必须完全相等才会相等
+		NaN===NaN;//false
+		isNaN(NaN);//true,唯一能够判断nan的函数
+		Math.abs(1/3-(1-2/3))<0.0000001;//true
+		//数组2种创建方式,建议使用第一种,比较容易看
+		[1,2,3.14,'hell',null,true];
+		new Array(1,2,3);//创建了数组[1，2，3]
+		var arr=[1,2,3.14,'hello',null,true];
+		arr[0];//返回索引为0的元素,1
+		arr[5];//返回true
+		arr[6];//超出范围,返回undefined
+		
+		//对象
+		var person = {
+			name: 'bob',
+			age:20,
+			tags: ['js','web','mobile'],
+			city: 'beijing',
+			hascar: true,
+			zipcode: null
+		};
+		person.name;
+		person.zipcode;
+		
+		//变量 =是赋值
+		var a;
+		var $b = i;
+		
+		//如果定义的时候没有用var申明,该变量会变成全局变量
+		i= 10;//i现在就是全局变量;
+		
+		//'use strict' 在js语句的第一行写这句话,如果不用var定义,会报错
+	</script>
+	</body>
+</html>
