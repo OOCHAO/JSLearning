@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		<script>
+			var m =new Map([['michael',95],['bob,76'],['tracy',85]]);
+			alert(m.get('michael'));
+			
+			
+			//初始化map需要一个二维数组,或者直接初始化一个空map
+			var n= new Map();
+			n.set('adam',67);//添加一个新的key-value
+			n.set('bob',59);
+			n.has('adam');//是否存在key 'adam':true
+			n.get('adam');//67
+			n.delete('adam');//删除key'adam'
+			n.get('adam');//undefined
+			//多次对一个key放入value,后面对值会把前面对值冲掉:
+			
+			//set
+			var s1 = new Set();//空set
+			var s2 = new Set([1,2,3]);//含1,2,3
+			var s = new Set([1,2,3,3,'3']);//重复元素会自动过滤
+			s;//set{1,2,3,"3"}
+			s.add(4);//在末尾添加4
+			s.delete(3);
+			s;
+			var f=[1,2,3]
+			f.name = 'jh';
+			for(var r of f){
+				console.log(r);
+			}
+			var b=[1,2,4];
+			b.forEach(function(element){
+				console.log(element);
+				
+			});
+		</script>
+		
+	</body>
+</html>

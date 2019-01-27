@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		<script>
+			var arr=[1,2,,3.14,'hello',null,true];
+			arr.length;//6
+			//直接给arr.length赋值会导致array大小的变化
+			var arr1=[1,2,3,4];
+			arr1.length;
+			arr1.length = 7;
+			arr1;//arr变化为[1，2，3，4，underfined,underfined,underfined]
+			arr1.length=2;
+			arr1;//arr变化为[1，2]
+			
+			arr1[1]=99;
+			// alert(arr1);
+			arr1[3]=34;//当索引超过范围时
+			// alert(arr1);
+			var arr2=[10,20,'30','myc'];
+			arr2.indexOf(10);//元素10的索引为0
+			arr2.indexOf(20);//元素20的索引为1
+			// arr2.index(30);//元素30没有找到,返回-1
+			arr2.indexOf('30');//元素'30'的索引为2
+			
+			
+			//slice对应字符串string里面的substring()
+			var arr3=['1','2',3,4,5];
+			arr3.slice(0,3);//索引从0开始到3结束包括起始位置不包括结束
+			arr3.slice(3);//索引从3开始到结束
+			var acopy = arr3.slice();
+			acopy;
+			// console.log(acopy);
+			
+			//push()向array的末尾添加若干元素,pop()则把array的最后一个元素删除;
+			var arr4 = [1,2];
+			arr4.push('a','b');
+			console.log(arr4);//[1,2,'a','b']
+			arr4.pop();
+			console.log(arr4);//[1,2,'a']
+			//unshift()在数组的开头添加,shift()删除数组第一个
+			arr4.unshift('a','b');
+			console.log(arr4);
+			arr4.shift();
+			// console.log(arr4);
+			
+			//sort()对当前的array进行排序,它会直接修改当前array的元素位置,直接调用时,按照默认顺序排序
+			var arr5 = ['a','c','b'];
+			arr5.sort();
+			// console.log(arr5);
+			
+			//reverse()把整个arrayd 函数给调个,反转
+			arr5.reverse();
+			// console.log(arr5);
+			
+			// splice()万能方法
+			var arr6=['microsfot','apple','yahoo','aol','excite','haha'];
+			//从索引2的位置开始删除3个数字,然后在原来的位置添加新的元素.
+			arr6.splice(2,3,'new1','new2');
+			console.log(arr6);
+			arr6.splice(2.2);//只删除不添加
+			arr6.splice(2.0,'ad','add');//只添加不删除,在索引为2的前面添加
+			
+			//concat()方法是把当前的array和另一个array连接起来,并返回一个新的array
+			var arr7=['a','b','c'];
+			var addarry = arr7.concat([1,2,3]);
+			 console.log(addarry);//["a", "b", "c", 1, 2, 3]
+			
+			//join 把当前array的每个元素都用指定的字符串连接起来,然后返回连接后的字符串
+			var arr8 = [1,2,3];
+			arr8.join("-");
+			// alert(arr8);
+			//join没反应
+			
+			'use strict';
+			var arr9 = [[1,2,3],[400,500,600],'-'];
+			arr9.shift();
+			arr9.pop();
+			var x = arr9[0][1];
+			alert(x);
+			
+			// 练习：在新生欢迎会上，你已经拿到了新同学的名单，
+			// 请排序后显示：欢迎XXX，XXX，XXX和XXX同学！
+			var arr = ['小明', '小红', '大军', '阿黄'];
+			var lastname = arr.pop();
+			var name = arr.join(',');
+			console.log('欢迎'+name+'和'+lastname+'同学！')
+		</script>
+	</body>
+</html>

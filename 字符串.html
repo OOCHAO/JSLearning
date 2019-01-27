@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>字符串</title>
+	</head>
+	<body>
+		<script>
+			//转义符\
+			console.log('i\'m\"ok\"!');
+			'\x41';//等同于'A'
+			//反引号`....`
+			console.log(`这是一个
+			多行
+			字符串`);
+			//连接多个字符串用+
+			var name = '小明';
+			var age = 20;
+			var message = '你好,' + name +',你今年'+ age + '岁了！';
+			alert(message);
+			var name = '小白';
+			var age = 20;
+			var message2 = `你好,${name},你今年${age}岁了!`;
+			alert(message2);
+		</script>
+	</body>
+</html>
