@@ -14,6 +14,7 @@
 			多行
 			字符串`);
 			//连接多个字符串用+
+			//` ${} ,${}    `
 			var name = '小明';
 			var age = 20;
 			var message = '你好,' + name +',你今年'+ age + '岁了！';
@@ -22,6 +23,31 @@
 			var age = 20;
 			var message2 = `你好,${name},你今年${age}岁了!`;
 			alert(message2);
+			
+			//操作字符串
+			//索引从0开始
+			var a = 'hello,world';
+			a.length;//13
+			a[0];//'h'
+			a[14];//超出范围返回undefined
+			//字符串是不可变的
+			var s= 'test';
+			s[0]='x';
+			alert(s);//s仍为'test'
+			
+			//把一个字符串全部变为大写:
+			var q ='hello'
+			s.toUpperCase();//大写
+			var w ='HELLO'
+			s.toLowerCase();//小写
+			var e = 'hello,world';
+			e.indexOf('world');//返回7,搜索指定字符串出现的位置:
+			e.indexOf('world');//没有找到指定的子串,返回-1
+			//substring ()返回指定索引区间的子串:
+			var x = 'hello,world'
+			x.substring(0,5);//从索引0开始到5(不包括5),返回'hello'
+			x.substring(7);//索引从7开始到结束,返回'world'
+			
 		</script>
 	</body>
 </html>

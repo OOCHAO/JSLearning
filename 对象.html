@@ -5,5 +5,53 @@
 		<title></title>
 	</head>
 	<body>
+		<script>
+			//用若干个键值来描述
+			var xiaoming = {
+				name :'小明',
+				birth : 1990,
+				school : 'no.1 middle school',
+				height : 1.70,
+				weight :65,
+				score :null
+			};
+			xiaoming.name;//小明
+			xiaoming.birth;//1990
+			//如果属性名包含特殊符号,bi需要''扩起来
+			var xiaobai ={
+				name :'xiaobai',
+				'middle-school':'no1 middle school'
+			};
+			xiaobai['middle school'];//'no1 middle school'
+			xiaobai ['name'];//xiaobai
+			xiaobai.name;//xiaobai
+			//访问不存在的值将会放回undefined
+			
+			//新增一个属性或者删除一个属性
+			xiaobai.age = 18;
+			xiaobai.age;
+			delete xiaobai.age;
+			//删除一个不存在的值是不会报错的
+			//检测是否拥有某一个属性,用in操作符
+			// 小明继承得到的属性也将会显示出来
+			'name' in xiaoming ;//true
+			'grade' in xiaoming ;//false
+			//判断是否是自身拥有的,而不是继承得到的,可以用hasownproperty()
+			var xiaohei = {
+				name: 'xiaohei',
+			};
+			xiaohei.hasOwnProperty('name');//true
+			xiaohei.hasOwnProperty('tostring');//false
+		</script>
+		
+		
+		<script>
+			var arry={1,2,3,4,5,}
+			for(i=0;i<=arry.length;i++){
+				var add=0;
+				add+=arry[i];
+				console.log(add);
+			}
+		</script>
 	</body>
 </html>

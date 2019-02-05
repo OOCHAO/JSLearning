@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>计算</title>
+		<!-- <link rel="stylesheet" type="text/css" href=""/> -->
+		<style type="text/css">
+			body{
+				font-size: 12px;
+				font-family:"微软雅黑";
+				color: #666;
+			}
+			/* *result {
+				width: 300px;
+				height: 80px;
+				
+			} */
+			*{
+				padding:0px;
+				margin:0px;
+			}
+			#cac{
+				width: 450px;
+				height: 720px;
+				background: #f2f2f2;
+				margin: 0 auto;
+				padding: 10px;
+			}
+			#cac .c_key .s_text{
+				width: 500px;
+				height: 42px;
+				border: none;
+				color: #9e9e9e;
+				line-height: 42px;
+				text-align: right;
+				font-size: 34px;
+				padding-right: 20px;
+			}
+			
+			#cac h2{
+				font-family: "微软雅黑";
+				font-size: 30px;
+				color: #FFFFFF;
+			}
+			#cac .c_key ul{
+				border: 3px solid #fff;
+				overflow: auto;
+				margin: 10px auto;
+			}
+			#cac .c_key ul li{
+				background-color:  dimgray;
+				color: white;
+				border-radius: 50%;
+				float: left;
+				width: 80px;
+				height: 80px;
+				margin: 11px;
+				text-align: center;
+				font-size: 30px;
+				line-height: 80px;
+				list-style: none;
+				border: 1px #F2F2F2;
+			}
+			#cac .c_key ul .fuaho{
+				color: white;
+				background: orange;
+			}
+			#cac .c_key ul .shang{
+				background:  #9E9E9E;
+				color: black;
+			}
+			#cac .s_text{
+				width: 450px;
+				height: 200px;
+				background: black;
+				border: 0px solid#F2F2F2;
+				color: #F2F2F2;
+				font-size: 50px;
+				padding: 0px;
+				text-align: right;
+				border-radius: 10px;
+				line-height: normal;
+			}
+			
+		</style>
+		
+		<script>
+			var resultdom = document.getElementById("result");
+			//点击计算器执行函数
+			function command(num){
+				var str = resultdom.value;
+				str = (str=="0"?"":str);
+				str+=num;
+				resultdom.value=str;
+// 			}
+		</script>
+	</head>
+	<body>
+		<div id="cac">
+			<!-- <h2>计算器</h2> -->
+			<input type="text"class="s_text" id="result"value="0"  />
+			
+			<div class="c_key">
+			<ul>
+				<li class="shang" onclick="del('j')">ac</li>
+				<li class="shang">+/-</li>
+				<li class="shang">%</li>
+				<li class="fuaho">\</li>
+				<li onclick="command(7)">7</li>
+				<li onclick="command(8)">8</li>
+				<li onclick="command(9)">9</li>
+				<li class="fuaho">x</li>
+				<li onclick="command(4)">4</li>
+				<li onclick="command(5)">5</li>
+				<li onclick="command(6)">6</li>
+				<li class="fuaho">-</li>
+				<li onclick="command(1)">1</li>
+				<li onclick="command(2)">2</li>
+				<li onclick="command(3)">3</li>
+				<li class="fuaho">+</li>
+				<li onclick="command(0)">0</li>
+				<li onclick="command(00)">00</li>
+				<li>.</li>
+				<li class="fuaho">=</li>
+			</ul>
+			</div>	
+		</div>
+			
+		</div>
+	</body>
+</html>
